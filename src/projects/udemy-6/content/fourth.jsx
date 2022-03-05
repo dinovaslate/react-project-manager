@@ -1,6 +1,6 @@
 import "../App.css";
 import React, { useEffect, useState } from "react";
-import axios from "../api/weather";
+import axios from "./../api/weather";
 import { Center } from "@chakra-ui/react";
 import Input from "../common/input";
 import WeatherCard from "../common/WeatherCard";
@@ -10,8 +10,6 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
-  HStack,
-  SimpleGrid,
 } from "@chakra-ui/react";
 
 const Weather = () => {
@@ -81,11 +79,9 @@ const Weather = () => {
         />
       </form>
       <Center mt={7}>
-        <HStack spacing={8}>
-          <SimpleGrid column={4} gap={6}>
-            {renderWeatherCard()}
-          </SimpleGrid>
-        </HStack>
+        <Grid templateColumns="repeat(4, 1fr)" gap={6}>
+          {renderWeatherCard()}
+        </Grid>
       </Center>
     </>
   );

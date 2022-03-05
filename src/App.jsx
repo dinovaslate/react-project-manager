@@ -4,7 +4,6 @@ import Route from "./components/Route";
 import Welcome from "./components/welcome";
 import App1 from "./projects/udemy-1/App";
 import App2 from "./projects/udemy-2/App";
-import App3 from "./projects/udemy-3/App";
 import App4 from "./projects/udemy-4/App";
 import App5 from "./projects/udemy-5/App";
 import App6 from "./projects/udemy-6/App";
@@ -24,9 +23,6 @@ function App() {
         </Route>
         <Route path="/comments" setter={setActive}>
           <App2 />
-        </Route>
-        <Route path="/season" setter={setActive}>
-          <App3 />
         </Route>
         <Route path="/pics" setter={setActive}>
           <App4 />

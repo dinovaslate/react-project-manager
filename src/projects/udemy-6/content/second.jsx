@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Dropdown from "../common/dropdown";
+import Dropdown from "./../common/dropdown";
 import { useState } from "react";
 import { Heading } from "@chakra-ui/react";
 const Second = (props) => {

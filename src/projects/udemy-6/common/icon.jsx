@@ -67,7 +67,6 @@ export const getIcon = (param, time) => {
     case "heavy rain at time":
     case "heavy rain":
     case "rain with thunderstorm":
-    case "thunderstorm in vicinity":
       return <FontAwesomeIcon icon={faCloudShowersHeavy} size="6x" />;
     default:
       console.log(param);

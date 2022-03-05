@@ -17,13 +17,6 @@ const Welcome = (props) => {
             </a>
           </div>
         </div>
-        <div className="row">
-          <div className="ui warning message" style={{ width: "100%" }}>
-            <div className="header">WARNING!!</div>
-            Heavy content in Season Display section, if you have low-end
-            computer i suggest not to go in that site
-          </div>
-        </div>
       </div>
     </>
   );

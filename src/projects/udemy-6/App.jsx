@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Center, Square, Circle } from "@chakra-ui/react";
 import Segment from "./common/segment";
 import Content from "./common/content";
-const App6 = (props) => {
+const App = (props) => {
   return (
     <>
       <div
@@ -17,4 +17,4 @@ const App6 = (props) => {
   );
 };
 
-export default App6;
+export default App;

@@ -16,7 +16,13 @@ const Dropdown = ({
         selected={selected.value}
         variant="filled"
         value={selected?.value} // returns undefined when first started but don't do anything when it's in conditional chain
-        onChange={(e) => onSelectedChange(e.target.selectedOptions[0])}
+        onChange={(e) =>
+          onSelectedChange(
+            options.find(
+              (option) => option.value === e.target.selectedOptions[0].value
+            )
+          )
+        }
         isDisabled={disabled}
       >
         {options.map((option, index) => (

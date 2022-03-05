@@ -14,23 +14,33 @@ const WeatherCard = ({ city, cities, setCities }) => {
       try {
         const { data } = await weather.get("/current", {
           params: {
-            access_key: "4ba6b2112a3d7ca8ab0eb3a911b9c78f",
+            access_key: "8387616aa7c2f8957ba1181424862034",
             query: city,
           },
         });
         setCurrentWeather(data.current);
         setState("show");
+        localStorage.setItem(`city${city}`, JSON.stringify(data.current));
       } catch (e) {
         console.log(e);
         deleteWeatherCard();
       }
     };
-    getWeather(city);
+    if (localStorage.getItem(`city${city}`) === null) {
+      console.log(`failed to get ${city} in local storage`);
+      getWeather(city);
+    } else {
+      console.log(`Success to get ${city} in local storage`);
+      setCurrentWeather(JSON.parse(localStorage.getItem(`city${city}`)));
+      setState("show");
+    }
   }, []);
 
   const deleteWeatherCard = () => {
     const data = cities.filter((town) => town != city);
     setCities(data);
+    localStorage.getItem(`city${city}`) !== null &&
+      localStorage.removeItem(`city${city}`);
   };
 
   const renderCard = () => {

@@ -12,6 +12,7 @@ class Video extends Component {
           ) : (
             <div>
               <iframe
+                title="Youtube Video"
                 style={{ width: "100%" }}
                 height="555"
                 src={`https://www.youtube.com/embed/${viewResult.id.videoId}`}

@@ -3,8 +3,8 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import Segment from "./segment";
 import First from "../content/first";
 import Second from "../content/second";
-import Third from "../content/third";
-import Weather from "../content/fourth";
+import Third from "./../content/third";
+import Weather from "./../content/fourth";
 
 const Content = (props) => {
   return (
