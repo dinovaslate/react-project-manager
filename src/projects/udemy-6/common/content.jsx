@@ -5,8 +5,10 @@ import First from "../content/first";
 import Second from "../content/second";
 import Third from "./../content/third";
 import Weather from "./../content/fourth";
+import { useMediaQuery } from "react-responsive";
 
 const Content = (props) => {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   return (
     <>
       <Tabs mt="5">
@@ -14,7 +16,7 @@ const Content = (props) => {
           <Tab>Accordion</Tab>
           <Tab>Dropdown</Tab>
           <Tab>Translate (free)</Tab>
-          <Tab>Weather</Tab>
+          {!isTabletOrMobile && <Tab>Weather</Tab>}
         </TabList>
 
         <TabPanels>
@@ -27,9 +29,11 @@ const Content = (props) => {
           <TabPanel>
             <Third />
           </TabPanel>
-          <TabPanel>
-            <Weather />
-          </TabPanel>
+          {!isTabletOrMobile && (
+            <TabPanel>
+              <Weather />
+            </TabPanel>
+          )}
         </TabPanels>
       </Tabs>
     </>

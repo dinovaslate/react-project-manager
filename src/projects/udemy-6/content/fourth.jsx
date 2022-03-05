@@ -61,10 +61,20 @@ const Weather = () => {
   return (
     <>
       {showMessage && (
-        <Alert status="info" mb={6}>
-          <AlertIcon />
-          The time is determined by the observation time
-        </Alert>
+        <>
+          <Alert status="info" mb={6}>
+            <AlertIcon />
+            The time is determined by the observation time
+          </Alert>
+          <Alert status="error" mb={6}>
+            <AlertIcon />
+            <b>
+              Please allow insecure content in the site settings to use this
+              feature{"  "}
+              as this features requires the app to fetch a data in HTTP server
+            </b>
+          </Alert>
+        </>
       )}
       <form onSubmit={(e) => handleFormSubmit(e)}>
         <Input
