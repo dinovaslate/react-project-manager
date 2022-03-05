@@ -3,8 +3,8 @@ import Input from "../common/input";
 import Segment from "../common/segment";
 import Dropdown from "./../common/dropdown";
 import axios from "axios";
-const queryString = require("query-string");
 import { Heading } from "@chakra-ui/react";
+const queryString = require("query-string");
 const Third = (props) => {
   const [term, setTerm] = useState("");
   const [options, setOptions] = useState([]);
@@ -20,7 +20,6 @@ const Third = (props) => {
   const flip = () => {
     setSelectedFrom(selectedTo);
     setSelectedTo(selectedFrom);
-    console.log(selectedToRef.current);
   };
   useEffect(() => {
     selectedFrom !== undefined &&
